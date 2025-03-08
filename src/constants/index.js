@@ -1,28 +1,18 @@
 import {
-    mobile,
     backend,
     creator,
     web,
-    javascript,
-    typescript,
+  javascript,
     html,
     css,
-    reactjs,
-    redux,
-    tailwind,
+  reactjs,
     nodejs,
     mongodb,
-    git,
-    figma,
-    docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
+  git,
+  docker,
     dealls,
     inedu,
-    b25,
-    tripguide,
+  b25,
     threejs,
     go,
     mysql,
@@ -32,7 +22,10 @@ import {
     pahamify,
     cleanarch,
     ongoing,
-    alterra
+  alterra,
+  wisata,
+  galunggung,
+  rima,
   } from "../assets";
   
   export const navLinks = [
@@ -126,6 +119,18 @@ import {
   
   const experiences = [
     {
+      title: "Fullstack Engineer (Frontend Heavy)",
+      company_name: "Wisata App",
+      icon: wisata,
+      iconBg: "#ffffff",
+      date: "Feb 2024 - April 2024",
+      points: [
+        "Engaged in feature ideation and design processes, collaborating with stakeholders to define and implement user-centric solutions",
+        "Developed responsive frontend interfaces using Nuxt (Vue.js)",
+        "Maintained backend services using Python (FastAPI) and PostgreSQL"
+      ],
+    },
+    {
       title: "Software Engineer",
       company_name: "Dealls",
       icon: dealls,
@@ -194,9 +199,53 @@ import {
   
   const projects = [
     {
-      name: "[Ongoing] Kreanesia",
+      name: "[Ongoing] Galunggung",
       description:
-        "Ongoing Laravel App for Kreanesia event",
+        "A Company Website for PT Galunggung Perkasa Husada (a Medical Device company based in Tasikmalaya). Frontend + Strapi CMS",
+      tags: [
+        {
+          name: "next",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "javascript/typescript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "strapi-cms",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: galunggung,
+      source_code_link: "https://github.com/daffaalex22/galunggung",
+      live_link: "https://galunggung.vercel.app"
+    },
+    {
+      name: "Rima Indonesia",
+      description:
+        "An app for finding any text's rhymes. I built this app using React and Firebase Firestore.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "firebase",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "shadcn",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: rima,
+      source_code_link: "https://github.com/daffaalex22/kamus-rima",
+      live_link: "https://rima.vercel.app"
+    },
+    {
+      name: "Kreanesia",
+      description:
+        "Laravel App for an event called Kreanesia",
       tags: [
         {
           name: "laravel",

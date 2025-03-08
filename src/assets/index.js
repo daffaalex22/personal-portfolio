@@ -14,6 +14,8 @@ import cleanarch from "./clean-arch.png"
 import live from "./live.png"
 import ongoing from "./ongoing.jpg"
 import alterra from "./alterra.png"
+import rima from "./rima.png"
+import galunggung from "./galunggung.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -42,7 +44,8 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import dealls from "./company/dealls.png";
-import pahamify from "./company/pahamify.jpg"
+import pahamify from "./company/pahamify.jpg";
+import wisata from "./company/wisata.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -84,10 +87,13 @@ export {
   jobit,
   tripguide,
   pahamify,
+  wisata,
   rocket,
   inedu,
   b25,
   cleanarch,
+  rima,
+  galunggung,
   live,
   ongoing,
   alterra
