@@ -20,13 +20,15 @@ import {
     graphql,
     aws,
     pahamify,
-    cleanarch,
-    ongoing,
+  cleanarch,
   alterra,
   wisata,
   galunggung,
   rima,
   peakPost,
+  github,
+  live,
+  atomik,
   } from "../assets";
   
   export const navLinks = [
@@ -222,6 +224,32 @@ import {
         },
       ],
       image: galunggung,
+      links: [
+        {
+          title: "Frontend",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/galunggung"
+        },
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: "https://galunggung.vercel.app"
+        },
+        {
+          title: "CMS",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/galunggung-backend"
+        },
+        {
+          title: "CMS",
+          type: "external",
+          icon: live,
+          url: "https://galunggung-backend.onrender.com/admin"
+        },
+      ],
       source_code_link: "https://github.com/daffaalex22/galunggung",
       live_link: "https://galunggung.vercel.app"
     },
@@ -252,6 +280,32 @@ import {
         },
       ],
       image: peakPost,
+      links: [
+        {
+          title: "Frontend",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/peak-post"
+        },
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: "https://peak-post.vercel.app/"
+        },
+        {
+          title: "CMS",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/peak-post-strapi"
+        },
+        {
+          title: "CMS",
+          type: "external",
+          icon: live,
+          url: "https://peak-post-strapi.onrender.com/admin"
+        }
+      ],
       source_code_link: "https://github.com/daffaalex22/galunggung",
       live_link: "https://galunggung.vercel.app"
     },
@@ -274,13 +328,27 @@ import {
         },
       ],
       image: rima,
+      links: [
+        {
+          title: "Source Code",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/kamus-rima"
+        },
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: "https://kamus-rima.vercel.app"
+        }
+      ],
       source_code_link: "https://github.com/daffaalex22/kamus-rima",
-      live_link: "https://rima.vercel.app"
+      live_link: "https://kamus-rima.vercel.app"
     },
     {
-      name: "Kreanesia",
+      name: "Atomik",
       description:
-        "Laravel App for an event called Kreanesia",
+        "Laravel Landing page for an event. Due to some issue with the internal stakeholders, event is postponed and cancelled.",
       tags: [
         {
           name: "laravel",
@@ -295,7 +363,21 @@ import {
           color: "blue-text-gradient",
         },
       ],
-      image: ongoing,
+      image: atomik,
+      links: [
+        {
+          title: "Source Code",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/atomik-event-laravel"
+        },
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: "https://atomik-event.vercel.app/"
+        }
+      ],
       source_code_link: "#",
       live_link: "#"
     },
@@ -322,6 +404,32 @@ import {
         },
       ],
       image: inedu,
+      links: [
+        {
+          title: "Frontend",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/LMS-Frontend"
+        },
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: "https://inedu-frontend.vercel.app"
+        },
+        {
+          title: "Backend",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/LMS-Backend"
+        },
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: ""
+        },
+      ],
       source_code_link: "https://linktr.ee/daffaalexander",
       live_link: "https://inedu-frontend.vercel.app"
     },
@@ -340,6 +448,20 @@ import {
         },
       ],
       image: b25,
+      links: [
+        {
+          title: "Source Code",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/before25_alta-ver"
+        },
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: ""
+        }
+      ],
       source_code_link: "https://github.com/daffaalex22/before25_alta-ver",
       live_link: "https://before25-alterra.netlify.app/"
     },
@@ -362,6 +484,20 @@ import {
         },
       ],
       image: cleanarch,
+      links: [
+        {
+          title: "Source Code",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/jobdir"
+        },
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: ""
+        }
+      ],
       source_code_link: "https://github.com/daffaalex22/jobdir",
       live_link: "https://job-directory-n9ak.onrender.com"
     },

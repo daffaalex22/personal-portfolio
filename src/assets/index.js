@@ -17,6 +17,7 @@ import alterra from "./alterra.png"
 import rima from "./rima.png"
 import galunggung from "./galunggung.png"
 import peakPost from "./peak-post.png"
+import atomik from "./atomik.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -98,5 +99,6 @@ export {
   peakPost,
   live,
   ongoing,
-  alterra
+  alterra,
+  atomik
 };

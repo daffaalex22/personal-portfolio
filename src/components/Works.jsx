@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
-import { github } from '../assets';
-import { live } from '../assets';
 import { SectionWrapper } from './../hoc';
 import { fadeIn, textVariant } from './../utils/motion';
 import { styles } from '../styles';
@@ -14,8 +12,7 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  source_code_link,
-  live_link
+  links
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5 * 0.75)}>
@@ -34,29 +31,25 @@ const ProjectCard = ({
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl"
           />
+        </div>
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+        <div className="mt-4 flex flex-wrap gap-2">
+          {links.map((link, index) => (
+            <button
+              key={`title-${index}`}
+              className={`${link.type === "github" ? "black-gradient" : "violet-gradient"} py-2 px-4 rounded-xl font-semibold hover:opacity-80 transition-opacity text-[14px] flex items-center w-[calc(50%-0.25rem)] justify-center ${!link.url ? 'hidden' : ''}`}
+              type='button'
+              onClick={() => window.open(link.url, "_blank")}
+              disabled={!link.url}
             >
               <img 
-                src={github} 
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
+                src={link.icon}
+                alt="icon"
+                className="h-[14px] w-auto mr-2"
               />
-            </div>
-            <div
-              onClick={() => window.open(live_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ml-1"
-            >
-              <img 
-                src={live} 
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div>
+              {link.title}
+            </button>
+          ))}
         </div>
 
         <div className="mt-5">
@@ -74,6 +67,7 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
+
       </Tilt>
     </motion.div>
   )
