@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
 import { github } from '../assets';
 import { live } from '../assets';
@@ -64,7 +64,7 @@ const ProjectCard = ({
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
-        <div className="mt-4 flex gap-2">
+        <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
@@ -92,7 +92,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          These are some of projects that I've worked on in the past. Each projects contain links to it's GitHub repository as well as (some) live page of the projects. This shows my focus, management, drive as well as capability to work with different tech stacks. 
+          These are some of projects that I&apos;ve worked on in the past. Each projects contain links to it&apos;s GitHub repository as well as (some) live page of the projects. This shows my focus, management, drive as well as capability to work with different tech stacks. 
         </motion.p>
       </div>
 

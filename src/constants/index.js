@@ -26,6 +26,7 @@ import {
   wisata,
   galunggung,
   rima,
+  peakPost,
   } from "../assets";
   
   export const navLinks = [
@@ -215,8 +216,42 @@ import {
           name: "strapi-cms",
           color: "blue-text-gradient",
         },
+        {
+          name: "neondb",
+          color: "green-text-gradient",
+        },
       ],
       image: galunggung,
+      source_code_link: "https://github.com/daffaalex22/galunggung",
+      live_link: "https://galunggung.vercel.app"
+    },
+    {
+      name: "Peak Post",
+      description:
+        "A News (blogging) app that showcase my profiency with Strapi CMS, GraphQL and Nextjs",
+      tags: [
+        {
+          name: "next",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "javascript/typescript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "strapi-cms",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "supabase",
+          color: "green-text-gradient",
+        },
+        {
+          name: "graphql",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: peakPost,
       source_code_link: "https://github.com/daffaalex22/galunggung",
       live_link: "https://galunggung.vercel.app"
     },
@@ -282,7 +317,7 @@ import {
           color: "pink-text-gradient",
         },
         {
-          name: "restapi",
+          name: "RESTful-API",
           color: "blue-text-gradient",
         },
       ],
@@ -322,7 +357,7 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "restapi",
+          name: "RESTful-API",
           color: "pink-text-gradient",
         },
       ],

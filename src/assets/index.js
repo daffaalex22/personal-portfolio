@@ -16,6 +16,7 @@ import ongoing from "./ongoing.jpg"
 import alterra from "./alterra.png"
 import rima from "./rima.png"
 import galunggung from "./galunggung.png"
+import peakPost from "./peak-post.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -94,6 +95,7 @@ export {
   cleanarch,
   rima,
   galunggung,
+  peakPost,
   live,
   ongoing,
   alterra
