@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from 'framer-motion';
 import { slideIn } from '../utils/motion';
 import { styles } from '../styles';
@@ -7,7 +6,7 @@ import SectionWrapper from './../hoc/SectionWrapper';
 import { useState, useRef } from 'react';
  
 import emailjs from '@emailjs/browser';
-import EarthCanvas from './canvas/Earth';
+import { FaLinkedin, FaWhatsapp, FaEnvelope, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 const Contact = () => {
   const formRef = useRef();
@@ -120,6 +119,40 @@ const Contact = () => {
           >
             Send
           </button>
+
+          {/* Social Media Links */}
+          <div className="flex flex-wrap gap-4 mt-8">
+            <button
+              onClick={() => window.open('https://www.linkedin.com/in/daffa-alexander', '_blank')}
+              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+            >
+              <FaLinkedin className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => window.open('mailto:daffaalexander.work@gmail.com', '_blank')}
+              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+            >
+              <FaEnvelope className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => window.open('https://youtube.com/@atomik-code', '_blank')}
+              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+            >
+              <FaYoutube className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => window.open('https://instagram.com/daalx.x', '_blank')}
+              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+            >
+              <FaInstagram className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => window.open('https://wa.me/6289602903213', '_blank')}
+              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+            >
+              <FaWhatsapp className="w-5 h-5" />
+            </button>
+          </div>
         </form>
       </motion.div>
 

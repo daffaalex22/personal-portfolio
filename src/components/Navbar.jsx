@@ -5,6 +5,8 @@ import { styles } from '../styles'
 import { navLinks } from '../constants'
 import { logo, menu, close } from '../assets'
 
+import { FaLinkedin, FaWhatsapp, FaEnvelope, FaYoutube, FaInstagram } from 'react-icons/fa';
+
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -14,7 +16,7 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link 
+          <Link 
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
@@ -25,15 +27,8 @@ const Navbar = () => {
             <img src={logo} alt="logo" className="w-9 h-9 object-contain"/>
             <p className="text-white text-[18px] font-bold cursor-pointer flex"> Daffa &nbsp; <span className="sm:block hidden">Alexander</span></p>
           </Link>
-          <ul className="list-none hidden sm:flex flex-row gap-10">
-            <li>
-            <button
-              onClick={() => window.open('https://www.linkedin.com/in/daffa-alexander', '_blank')}
-              className="text-secondary hover:text-white text-[18px] font-medium cursor-pointer border border-secondary hover:border-white rounded-lg px-4 py-1 transition-colors"
-            >
-              LinkedIn
-            </button>
-            </li>
+          <ul className="list-none hidden lg:flex flex-row items-center gap-10 justify-end">
+          <div className="flex items-center gap-10">
             {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -47,9 +42,42 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
             ))}
+          </div>
+          <div className="flex items-center gap-4 ml-0">
+            <button
+              onClick={() => window.open('https://www.linkedin.com/in/daffa-alexander', '_blank')}
+              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+            >
+              <FaLinkedin className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => window.open('mailto:daffaalexander.work@gmail.com', '_blank')}
+              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+            >
+              <FaEnvelope className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => window.open('https://youtube.com/@atomik-code', '_blank')}
+              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+            >
+              <FaYoutube className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => window.open('https://instagram.com/daalx.x', '_blank')}
+              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+            >
+              <FaInstagram className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => window.open('https://wa.me/6289602903213', '_blank')}
+              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+            >
+              <FaWhatsapp className="w-5 h-5" />
+            </button>
+            </div>
           </ul>
 
-          <div className="sm:hidden flex flex-1 justify-end items-center">
+          <div className="lg:hidden flex flex-1 justify-end items-center">
               <img 
               src={toggle ? close : menu} 
               alt="menu"
@@ -74,8 +102,42 @@ const Navbar = () => {
                     >
                       <a href={`#${nav.id}`}>{nav.title}</a>
                     </li>
-                  ))}
-                </ul>
+                ))}
+                
+                {/* Social Media Icons */}
+                <div className="flex flex-wrap gap-2 mt-2 w-full justify-center">
+                  <button
+                    onClick={() => window.open('https://www.linkedin.com/in/daffa-alexander', '_blank')}
+                    className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+                  >
+                    <FaLinkedin className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => window.open('mailto:daffaalexander.work@gmail.com', '_blank')}
+                    className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+                  >
+                    <FaEnvelope className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => window.open('https://youtube.com/@atomik-code', '_blank')}
+                    className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+                  >
+                    <FaYoutube className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => window.open('https://instagram.com/daalx.x', '_blank')}
+                    className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+                  >
+                    <FaInstagram className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => window.open('https://wa.me/6289602903213', '_blank')}
+                    className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+                  >
+                    <FaWhatsapp className="w-4 h-4" />
+                  </button>
+                </div>
+              </ul>
               </div>
         </div>
 
