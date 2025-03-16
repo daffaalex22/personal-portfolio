@@ -16,7 +16,7 @@ const Contact = () => {
     message: "",
   })
 
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,7 +29,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
+    // setLoading(true);
 
     emailjs
       .send(
@@ -46,7 +46,7 @@ const Contact = () => {
       )
       .then(
         () => {
-          setLoading(false);
+          // setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
 
           setForm({
@@ -56,7 +56,7 @@ const Contact = () => {
           });
         },
         (error) => {
-          setLoading(false);
+          // setLoading(false);
           console.error(error);
 
           alert("Ahh, something went wrong. Please try again.");
@@ -121,38 +121,40 @@ const Contact = () => {
           </button>
 
           {/* Social Media Links */}
-          <div className="flex flex-wrap gap-4 mt-8">
-            <button
-              onClick={() => window.open('https://www.linkedin.com/in/daffa-alexander', '_blank')}
-              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
-            >
-              <FaLinkedin className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() => window.open('mailto:daffaalexander.work@gmail.com', '_blank')}
-              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
-            >
-              <FaEnvelope className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() => window.open('https://youtube.com/@atomik-code', '_blank')}
-              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
-            >
-              <FaYoutube className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() => window.open('https://instagram.com/daalx.x', '_blank')}
-              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
-            >
-              <FaInstagram className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() => window.open('https://wa.me/6289602903213', '_blank')}
-              className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
-            >
-              <FaWhatsapp className="w-5 h-5" />
-            </button>
-          </div>
+          {import.meta.env.VITE_SHOW_CONTACT && (
+            <div className="flex flex-wrap gap-4 mt-8">
+              <button
+                onClick={() => window.open('https://www.linkedin.com/in/daffa-alexander', '_blank')}
+                className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+              >
+                <FaLinkedin className="w-5 h-5" />
+              </button>
+              <button
+                onClick={() => window.open('mailto:daffaalexander.work@gmail.com', '_blank')}
+                className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+              >
+                <FaEnvelope className="w-5 h-5" />
+              </button>
+              <button
+                onClick={() => window.open('https://youtube.com/@atomik-code', '_blank')}
+                className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+              >
+                <FaYoutube className="w-5 h-5" />
+              </button>
+              <button
+                onClick={() => window.open('https://instagram.com/daalx.x', '_blank')}
+                className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+              >
+                <FaInstagram className="w-5 h-5" />
+              </button>
+              <button
+                onClick={() => window.open('https://wa.me/6289602903213', '_blank')}
+                className="text-secondary hover:text-white cursor-pointer border border-secondary hover:border-white rounded-full p-2 transition-colors"
+              >
+                <FaWhatsapp className="w-5 h-5" />
+              </button>
+            </div>
+          )}
         </form>
       </motion.div>
 

@@ -17,10 +17,11 @@ const App = () => {
           <Tech />
           <Works />
         </div>
+        {import.meta.env.VITE_SHOW_CONTACT &&
         <div className="relative z-0 sm:mt-0 -mt-72">
           <Contact />
         </div>
-
+        }
       </div>
     </BrowserRouter>
   )
