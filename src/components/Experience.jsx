@@ -1,12 +1,16 @@
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 import 'react-vertical-timeline-component/style.min.css'
 import { textVariant } from './../utils/motion';
 import { styles } from '../styles'
 import SectionWrapper from './../hoc/SectionWrapper';
 import { experiences } from '../constants'
+import { useState } from 'react';
 
 const ExperienceCard = ({ experience }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -31,25 +35,36 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <h3 className="text-white sm:text-[24px] text-[18px] font-bold">{experience.title}</h3>
         <p
-          className="text-secondary text-[16px] font-semibold"
+          className="text-secondary sm:text-[16px] text-[14px] font-semibold"
           style={{ margin: 0 }}
         >
           {experience.company_name}
         </p>
       </div>
 
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
+      <ul className="mt-3 sm:mt-5 list-disc ml-5 space-y-1 sm:space-y-2">
+        {experience.points.slice(0, isExpanded ? experience.points.length : 1).map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
+            className="text-white-100 text-[12px] sm:text-[14px] pl-1 tracking-wider"
           >
             {point}
           </li>
         ))}
       </ul>
+      
+      {experience.points.length > 1 && (
+        <div className="flex justify-end">
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-[12px] text-secondary mt-2"
+          >
+            {isExpanded ? "Show less" : "....read more"}
+          </button>
+        </div>
+      )}
     </VerticalTimelineElement> 
   )
 }
@@ -75,5 +90,15 @@ const Experience = () => {
     </>
   )
 }
+ExperienceCard.propTypes = {
+  experience: PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    iconBg: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    company_name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    points: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+};
 
 export default SectionWrapper(Experience, "work");

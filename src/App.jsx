@@ -11,16 +11,14 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-        <div className="sm:py-16 py-6">
+        <div className="sm:py-16 py-2">
           <About />
           <Experience />
           <Tech />
           <Works />
         </div>
-        {/* <Feedbacks /> */}
-        <div className="relative z-0">
+        <div className="relative z-0 sm:mt-0 -mt-72">
           <Contact />
-          {/* <StarsCanvas /> */}
         </div>
 
       </div>

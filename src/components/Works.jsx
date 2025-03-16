@@ -92,14 +92,14 @@ const Works = () => {
           initial="hidden"
           animate="show"
           viewport={{ once: true }}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-3 text-secondary text-[12px] sm:text-[17px] max-w-3xl leading-[20px] sm:leading-[30px]"
         >
           These are some of projects that I&apos;ve worked on in the past. Each projects contain links to it&apos;s GitHub repository as well as (some) live page of the projects. This shows my focus, management, drive as well as capability to work with different tech stacks. 
         </motion.p>
       </div>
 
       <motion.div 
-        className="mt-20 flex flex-wrap justify-center sm:justify-start gap-7"
+        className="mt-20 mb-0 flex flex-wrap justify-center sm:justify-start gap-7"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
