@@ -9,7 +9,7 @@ import { SectionWrapper } from '../hoc'
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt className="w-[48%] sm:w-[250px]">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         options={{
@@ -20,10 +20,10 @@ const ServiceCard = ({ index, title, icon }) => {
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+          className="bg-tertiary rounded-[20px] py-3 sm:py-5 px-6 sm:px-12 min-h-[180px] sm:min-h-[280px] flex justify-evenly items-center flex-col"
         >
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+          <img src={icon} alt={title} className="w-12 h-12 sm:w-16 sm:h-16 object-contain" />
+          <h3 className="text-white text-[14px] sm:text-[20px] font-bold text-center">{title}</h3>
         </div>
       </motion.div>
     </Tilt>
@@ -45,7 +45,7 @@ const About = () => {
         I am a skilled fullstack developer with experience in Go, NodeJS as well as ReactJS. I am a quick learner and communicates clearyly. Let&apos;s bring your ideas to life!
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap justify-between gap-y-6 sm:justify-start sm:gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service}/>
         ))}
