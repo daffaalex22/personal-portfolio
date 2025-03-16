@@ -151,7 +151,7 @@ import {
       ],
     },
     {
-      title: "Backend Software Engineer Intern",
+      title: "Backend Software Engineer",
       company_name: "Pahamify",
       icon: pahamify,
       iconBg: "#ffffff",
