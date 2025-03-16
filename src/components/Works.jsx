@@ -76,14 +76,22 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}  >My Work</p>
+      <motion.div 
+        variants={textVariant()}
+        initial="hidden"
+        animate="show"
+        viewport={{ once: true }}
+      >
+        <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
 
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
+          initial="hidden"
+          animate="show"
+          viewport={{ once: true }}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           These are some of projects that I&apos;ve worked on in the past. Each projects contain links to it&apos;s GitHub repository as well as (some) live page of the projects. This shows my focus, management, drive as well as capability to work with different tech stacks. 
