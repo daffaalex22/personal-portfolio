@@ -22,7 +22,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl w-full max-w-[360px]"
       >
         
         <div className="relative w-full h-[230px]">
@@ -37,7 +37,7 @@ const ProjectCard = ({
           {links.map((link, index) => (
             <button
               key={`title-${index}`}
-              className={`${link.type === "github" ? "black-gradient" : "violet-gradient"} py-2 px-4 rounded-xl font-semibold hover:opacity-80 transition-opacity text-[14px] flex items-center w-[calc(50%-0.25rem)] justify-center ${!link.url ? 'hidden' : ''}`}
+              className={`${link.type === "github" ? "black-gradient" : "violet-gradient"} py-2 px-4 rounded-xl font-semibold hover:opacity-80 transition-opacity text-[14px] flex items-center w-full sm:w-[calc(50%-0.25rem)] justify-center ${!link.url ? 'hidden' : ''}`}
               type='button'
               onClick={() => window.open(link.url, "_blank")}
               disabled={!link.url}
@@ -90,7 +90,20 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <motion.div 
+        className="mt-20 flex flex-wrap justify-center sm:justify-start gap-7"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.2,
+            }
+          }
+        }}
+      >
         {projects.map((project, index) => (
           <ProjectCard 
             key={`project-${index}`}
@@ -98,7 +111,7 @@ const Works = () => {
             {...project}
           />
         ))}
-      </div>
+      </motion.div>
     </>
   )
 }
