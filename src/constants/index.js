@@ -30,6 +30,7 @@ import {
   live,
   atomik,
   virta,
+  bbmTracker
   } from "../assets";
   
   export const navLinks = [
@@ -287,6 +288,38 @@ import {
       ],
       source_code_link: "https://github.com/daffaalex22/galunggung",
       live_link: "https://galunggung.vercel.app"
+    },
+    {
+      name: "BBM Price Tracker",
+      description:
+        "A News (blogging) app that showcase my profiency with Strapi CMS, GraphQL and Nextjs",
+      tags: [
+        {
+          name: "html/css/js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "ai-inference-api",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: bbmTracker,
+      links: [
+        {
+          title: "Source",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/bbm-price-tracker"
+        },
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: "https://bbm-price-tracker.onrender.com"
+        },
+      ],
+      source_code_link: "https://github.com/daffaalex22/bbm-price-tracker",
+      live_link: "https://bbm-price-tracker.onrender.com"
     },
     {
       name: "Peak Post",
