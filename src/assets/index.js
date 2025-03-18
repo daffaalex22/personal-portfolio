@@ -18,6 +18,7 @@ import rima from "./rima.png"
 import galunggung from "./galunggung.png"
 import peakPost from "./peak-post.png"
 import atomik from "./atomik.png"
+import virta from "./virta.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -93,6 +94,7 @@ export {
   rocket,
   inedu,
   b25,
+  virta,
   cleanarch,
   rima,
   galunggung,

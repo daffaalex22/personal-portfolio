@@ -29,6 +29,7 @@ import {
   github,
   live,
   atomik,
+  virta,
   } from "../assets";
   
   export const navLinks = [
@@ -252,6 +253,36 @@ import {
           type: "external",
           icon: live,
           url: "https://galunggung-backend.onrender.com/admin"
+        },
+      ],
+      source_code_link: "https://github.com/daffaalex22/galunggung",
+      live_link: "https://galunggung.vercel.app"
+    },
+    {
+      name: "[Ongoing] Virta",
+      description:
+        "An AI powered Virtual Staging Web App",
+      tags: [
+        {
+          name: "next",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "javascript/typescript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "ai",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: virta,
+      links: [
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: "https://virtaai.vercel.app/"
         },
       ],
       source_code_link: "https://github.com/daffaalex22/galunggung",
