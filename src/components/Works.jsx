@@ -58,9 +58,11 @@ const ProjectCard = ({
             <h3 className="text-white font-bold text-[24px]">{name}</h3>
             {ongoing && (
               <span 
-                className="text-white text-xs px-2 py-1 rounded-full"
+                className="text-white text-xs px-2 py-1 rounded-full relative overflow-hidden"
                 style={{
-                  background: 'linear-gradient(90deg, #00cea8, #bf61ff)'
+                  background: 'linear-gradient(90deg, #00cea8, #bf61ff, #00cea8)',
+                  backgroundSize: '200% 100%',
+                  animation: 'gradientMove 2s linear infinite'
                 }}
               >
                 Ongoing
@@ -133,6 +135,14 @@ const Works = () => {
           />
         ))}
       </motion.div>
+      <style>
+        {`
+          @keyframes gradientMove {
+            0% { background-position: 0% 0%; }
+            100% { background-position: -200% 0%; }
+          }
+        `}
+      </style>
     </>
   )
 }
