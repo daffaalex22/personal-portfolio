@@ -19,7 +19,7 @@ import galunggung from "./galunggung.png"
 import peakPost from "./peak-post.png"
 import atomik from "./atomik.png"
 import virta from "./virta.png"
-import bbmTracker from "./bbm-tracker"
+import bbmTracker from "./bbm-tracker.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";

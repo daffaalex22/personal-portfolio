@@ -208,59 +208,8 @@ import {
   
   const projects = [
     {
-      name: "[Ongoing] Galunggung",
-      description:
-        "A Company Website for PT Galunggung Perkasa Husada (a Medical Device company based in Tasikmalaya). Frontend + Strapi CMS",
-      tags: [
-        {
-          name: "next",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "javascript/typescript",
-          color: "green-text-gradient",
-        },
-        {
-          name: "strapi-cms",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "neondb",
-          color: "green-text-gradient",
-        },
-      ],
-      image: galunggung,
-      links: [
-        {
-          title: "Frontend",
-          type: "github",
-          icon: github,
-          url: "https://github.com/daffaalex22/galunggung"
-        },
-        {
-          title: "Live Demo",
-          type: "external",
-          icon: live,
-          url: "https://galunggung.vercel.app"
-        },
-        {
-          title: "CMS",
-          type: "github",
-          icon: github,
-          url: "https://github.com/daffaalex22/galunggung-backend"
-        },
-        {
-          title: "CMS",
-          type: "external",
-          icon: live,
-          url: "https://galunggung-backend.onrender.com/admin"
-        },
-      ],
-      source_code_link: "https://github.com/daffaalex22/galunggung",
-      live_link: "https://galunggung.vercel.app"
-    },
-    {
-      name: "[Ongoing] Virta",
+      name: "Virta",
+      ongoing: true,
       description:
         "An AI powered Virtual Staging Web App",
       tags: [
@@ -291,6 +240,7 @@ import {
     },
     {
       name: "BBM Price Tracker",
+      ongoing: true,
       description:
         "A News (blogging) app that showcase my profiency with Strapi CMS, GraphQL and Nextjs",
       tags: [
@@ -300,7 +250,7 @@ import {
         },
         {
           name: "ai-inference-api",
-          color: "blue-text-gradient",
+          color: "green-text-gradient",
         },
       ],
       image: bbmTracker,
@@ -373,6 +323,59 @@ import {
           icon: live,
           url: "https://peak-post-strapi.onrender.com/admin"
         }
+      ],
+      source_code_link: "https://github.com/daffaalex22/galunggung",
+      live_link: "https://galunggung.vercel.app"
+    },
+    {
+      name: "Galunggung",
+      ongoing: true,
+      description:
+        "A Company Website for PT Galunggung Perkasa Husada (a Medical Device company based in Tasikmalaya). Frontend + Strapi CMS",
+      tags: [
+        {
+          name: "next",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "javascript/typescript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "strapi-cms",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "neondb",
+          color: "green-text-gradient",
+        },
+      ],
+      image: galunggung,
+      links: [
+        {
+          title: "Frontend",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/galunggung"
+        },
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: "https://galunggung.vercel.app"
+        },
+        {
+          title: "CMS",
+          type: "github",
+          icon: github,
+          url: "https://github.com/daffaalex22/galunggung-backend"
+        },
+        {
+          title: "CMS",
+          type: "external",
+          icon: live,
+          url: "https://galunggung-backend.onrender.com/admin"
+        },
       ],
       source_code_link: "https://github.com/daffaalex22/galunggung",
       live_link: "https://galunggung.vercel.app"

@@ -12,7 +12,8 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  links
+  links,
+  ongoing
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5 * 0.75)}>
@@ -53,7 +54,19 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <div className="flex items-center gap-2">
+            <h3 className="text-white font-bold text-[24px]">{name}</h3>
+            {ongoing && (
+              <span 
+                className="text-white text-xs px-2 py-1 rounded-full"
+                style={{
+                  background: 'linear-gradient(90deg, #00cea8, #bf61ff)'
+                }}
+              >
+                Ongoing
+              </span>
+            )}
+          </div>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
@@ -99,7 +112,7 @@ const Works = () => {
       </div>
 
       <motion.div 
-        className="mt-20 mb-0 flex flex-wrap justify-center sm:justify-start gap-7"
+        className="mt-20 mb-0 columns-1 sm:columns-2 lg:columns-3 gap-7 [&>div]:mb-7"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
