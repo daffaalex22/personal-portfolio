@@ -30,7 +30,8 @@ import {
   live,
   atomik,
   virta,
-  bbmTracker
+  bbmTracker,
+  bedroomStager
   } from "../assets";
   
   export const navLinks = [
@@ -242,15 +243,19 @@ import {
       name: "BBM Price Tracker",
       ongoing: true,
       description:
-        "A News (blogging) app that showcase my profiency with Strapi CMS, GraphQL and Nextjs",
+        "Scrape Google News -> Extract News Article -> Summarize Result using AI -> Present BBM (Gas Fuel) Price",
       tags: [
         {
           name: "html/css/js",
           color: "blue-text-gradient",
         },
         {
-          name: "ai-inference-api",
+          name: "cohere-ai-api",
           color: "green-text-gradient",
+        },
+        {
+          name: "serpApi",
+          color: "orange-text-gradient",
         },
       ],
       image: bbmTracker,
@@ -423,7 +428,7 @@ import {
       tags: [
         {
           name: "laravel",
-          color: "blue-text-gradient",
+          color: "orange-text-gradient",
         },
         {
           name: "php",
@@ -447,6 +452,32 @@ import {
           type: "external",
           icon: live,
           url: "https://atomik-event.vercel.app/"
+        }
+      ],
+      source_code_link: "#",
+      live_link: "#"
+    },
+    {
+      name: "Bedroom Stager",
+      description:
+        "An App that can turn photo of Empty Room to be a Bedroom. A POC for my Virta Project.",
+      tags: [
+        {
+          name: "appsmith",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "gemini-api",
+          color: "green-text-gradient",
+        },
+      ],
+      image: bedroomStager,
+      links: [
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: "https://app.appsmith.com/app/bedroom-stager/home-67db027df26bb56fce669d96"
         }
       ],
       source_code_link: "#",

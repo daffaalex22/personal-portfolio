@@ -20,6 +20,7 @@ import peakPost from "./peak-post.png"
 import atomik from "./atomik.png"
 import virta from "./virta.png"
 import bbmTracker from "./bbm-tracker.png"
+import bedroomStager from "./bedroom-stager.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -104,5 +105,6 @@ export {
   ongoing,
   alterra,
   atomik,
-  bbmTracker
+  bbmTracker,
+  bedroomStager
 };
