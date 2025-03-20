@@ -16,14 +16,14 @@ const ProjectCard = ({
   ongoing
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5 * 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5 * 0.75)} className="inline-block w-full">
       <Tilt
         options={{
           max: 45,
           scale: 1,
           speed: 450
         }}
-        className="bg-tertiary p-5 rounded-2xl w-full max-w-[360px]"
+        className="bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] mx-auto"
       >
         
         <div className="relative w-full h-[230px]">
@@ -114,7 +114,11 @@ const Works = () => {
       </div>
 
       <motion.div 
-        className="mt-20 mb-0 columns-1 sm:columns-2 lg:columns-3 gap-7 [&>div]:mb-7"
+        className="mt-20 mb-0 columns-1 sm:columns-2 lg:columns-3 gap-7 [&>div]:mb-7 mx-auto"
+        style={{
+          columnWidth: '360px',
+          maxWidth: '1200px'
+        }}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
