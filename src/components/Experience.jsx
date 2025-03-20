@@ -44,27 +44,35 @@ const ExperienceCard = ({ experience }) => {
         </p>
       </div>
 
-      <ul className="mt-3 sm:mt-5 list-disc ml-5 space-y-1 sm:space-y-2">
-        {experience.points.slice(0, isExpanded ? experience.points.length : 1).map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className="text-white-100 text-[12px] sm:text-[14px] pl-1 tracking-wider"
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
-      
-      {experience.points.length > 1 && (
-        <div className="flex justify-end">
-          <button 
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="text-[12px] text-secondary mt-2"
-          >
-            {isExpanded ? "Show less" : "....read more"}
-          </button>
+      <div className="mt-3 sm:mt-5">
+        <div className="overflow-hidden">
+          <ul className={`list-disc ml-5 space-y-1 sm:space-y-2 transition-all duration-300 ease-in-out ${
+            isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-[24px] opacity-100'
+          }`}>
+            {experience.points.map((point, index) => (
+              <li
+                key={`experience-point-${index}`}
+                className={`text-white-100 text-[12px] sm:text-[14px] pl-1 tracking-wider transition-opacity duration-300 ${
+                  !isExpanded && index > 0 ? 'opacity-0' : 'opacity-100'
+                }`}
+              >
+                {point}
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
+        
+        {experience.points.length > 1 && (
+          <div className="flex justify-end">
+            <button 
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-[12px] text-secondary mt-2 transition-all duration-300 hover:text-white cursor-pointer"
+            >
+              {isExpanded ? "Show less" : "....read more"}
+            </button>
+          </div>
+        )}
+      </div>
     </VerticalTimelineElement> 
   )
 }
