@@ -46,14 +46,19 @@ const ExperienceCard = ({ experience }) => {
 
       <div className="mt-3 sm:mt-5">
         <div className="overflow-hidden">
-          <ul className={`list-disc ml-5 space-y-1 sm:space-y-2 transition-all duration-300 ease-in-out ${
-            isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-[24px] opacity-100'
+          <ul className={`list-disc ml-5 space-y-1 sm:space-y-2 transition-all duration-700 ease-in-out ${
+            isExpanded ? 'max-h-[2000px]' : 'max-h-[24px]'
           }`}>
             {experience.points.map((point, index) => (
               <li
                 key={`experience-point-${index}`}
-                className={`text-white-100 text-[12px] sm:text-[14px] pl-1 tracking-wider transition-opacity duration-300 ${
-                  !isExpanded && index > 0 ? 'opacity-0' : 'opacity-100'
+                style={{
+                  transitionDelay: isExpanded ? `${index * 100}ms` : '0ms'
+                }}
+                className={`text-white-100 text-[12px] sm:text-[14px] pl-1 tracking-wider transition-all duration-500 ease-in-out ${
+                  !isExpanded && index > 0 
+                    ? 'opacity-0 transform translate-y-[-8px]' 
+                    : 'opacity-100 transform translate-y-0'
                 }`}
               >
                 {point}
