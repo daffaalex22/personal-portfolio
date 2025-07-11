@@ -26,6 +26,7 @@ import {
   galunggung,
   rima,
   peakPost,
+  forcingAnIdea,
   github,
   live,
   atomik,
@@ -275,6 +276,36 @@ import {
       ],
       source_code_link: "https://github.com/daffaalex22/bbm-price-tracker",
       live_link: "https://bbm-price-tracker.onrender.com"
+    },
+    {
+      name: "Forcing an Idea",
+      description:
+        "An online clothing store that I built for a company based in Bandung, Indonesia. Prototype is made with Emergent AI, and then I adjust to the company's needs.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "javascript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "firebase",
+          color: "orange-text-gradient",
+        },
+      ],
+      image: forcingAnIdea,
+      links: [
+        {
+          title: "Live Demo",
+          type: "external",
+          icon: live,
+          url: "https://forcing-an-idea.web.app"
+        }
+      ],
+      source_code_link: "https://github.com/daffaalex22/forcing-an-idea",
+      live_link: "https://forcing-an-idea.web.app"
     },
     {
       name: "Peak Post",

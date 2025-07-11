@@ -17,6 +17,7 @@ import alterra from "./alterra.png"
 import rima from "./rima.png"
 import galunggung from "./galunggung.png"
 import peakPost from "./peak-post.png"
+import forcingAnIdea from "./forcing-an-idea.png"
 import atomik from "./atomik.png"
 import virta from "./virta.png"
 import bbmTracker from "./bbm-tracker.png"
@@ -101,6 +102,7 @@ export {
   rima,
   galunggung,
   peakPost,
+  forcingAnIdea,
   live,
   ongoing,
   alterra,
